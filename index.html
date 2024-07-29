@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #ddd;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5em;
+        }
+
+        .highlight {
+            color: #E67E22;
+            font-weight: 700;
+        }
+
+        button, a.button {
+            background-color: #E67E22;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        button:hover, a.button:hover {
+            background-color: #D35400;
+        }
+
+        .form-group {
+            margin-bottom: 1em;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analysis Report</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#key-findings">Key Findings</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="content" id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                The analysis presented here delves into various facets of customer transactions, demographic distributions, and data integrity within the organization. Through visualizations and comprehensive descriptions, this narrative aims to demystify the dataset, revealing critical trends, correlations, and anomalies that can drive meaningful change. The data is critically observed through different types of visual representations such as Hexbin plots, Bar charts, Histograms, and Word Clouds, each contributing unique insights. This analysis not only highlights key patterns but also proposes actionable recommendations to enhance data-driven decision-making.
+            </p>
+        </section>
+
+        <section class="content" id="key-findings">
+            <h2>Key Findings and Insights</h2>
+            
+            <h3>1. Transaction Amounts and Customer Account Balances</h3>
+            <p>
+                Hexbin plots reveal a pronounced clustering of transactions at lower amounts and lower customer account balances, indicating that many customers are engaging in relatively small transactions. The majority of transactions fall within the range of 0 to 100,000 INR, with customers' account balances typically near zero.
+                <br><span class="highlight">Action Insight:</span> Focus marketing and financial strategies on this customer segment to potentially increase their account balances and transaction amounts.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_24.png" alt="Hexbin Plot of Transaction Amounts and Customer Balances">
+            </div>
+            
+            <h3>2. Gender Distribution</h3>
+            <p>
+                A stacked bar chart highlights that 72.7% of the dataset constitutes male (M) customers, whereas only 27.3% constitutes female (F) customers.
+                <br><span class="highlight">Action Insight:</span> Develop targeted campaigns to balance the gender distribution, possibly focusing on increasing female customer engagement.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_7.png" alt="Gender Distribution">
+            </div>
+            
+            <h3>3. Temporal Patterns in Transactions</h3>
+            <p>
+                Analysis shows a notable concentration of transactions around specific time increments, indicating peak transaction times.
+                <br><span class="highlight">Action Insight:</span> Optimize resource allocation during these peak times to ensure seamless customer experience and efficient fraud detection mechanisms.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_25.png" alt="Transaction Time Peaks">
+            </div>
+            
+            <h3>4. Geographical Distribution of City Mentions</h3>
+            <p>
+                Word clouds representing city names indicate Delhi, Mumbai, and Bangalore as the top-mentioned cities, suggesting these are major hubs of activity.
+                <br><span class="highlight">Action Insight:</span> Focus on strengthening business operations and customer engagement strategies in these key cities.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_8.png" alt="City Mentions">
+            </div>
+            
+            <h3>5. Distribution of Data Points</h3>
+            <p>
+                Histogram analyses depict that data points are heavily skewed towards lower values in various metrics such as customer account balance and transaction amounts.
+                <br><span class="highlight">Action Insight:</span> Investigate the root causes of this skew to either balance the dataset or tailor services and products toward these high-frequency value ranges.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_14.png" alt="Histogram of Data Distribution">
+            </div>
+            
+            <h3>6. Correlation Analysis</h3>
+            <p>
+                Heatmaps exhibiting the correlation coefficients between different attributes reveal significant correlations, such as between customer account balances and transaction amounts.
+                <br><span class="highlight">Action Insight:</span> Leverage these correlations for predictive analytics to better understand customer behavior and enhance personalized services.
+            </p>
+            <div class="image-container">
+                <img src="Work_dir/png_outputs/svg_26.png" alt="Correlation Heatmap">
+            </div>
+        </section>
+
+        <section class="content" id="insights">
+            <h2>Actionable Insights and Recommendations</h2>
+            <p>
+                <strong>Customer Engagement Strategies:</strong> Increase engagement with customers who have account balances close to zero by offering incentives for larger deposits or transactions.
+                <br><span class="highlight">Real Figures:</span> Many transactions are clustered at lower amounts (e.g., below 100,000 INR), with customers' account balances also primarily being low (around 0.0 to 0.2 * 10^8).
+            </p>
+            <p>
+                <strong>Gender-Specific Campaigns:</strong> Develop female-centric marketing campaigns to increase female participation from the current 27.3% to a more balanced ratio.
+                <br><span class="highlight">Real Figures:</span> The distribution of M = 72.7% and F = 27.3%.
+            </p>
+            <p>
+                <strong>Temporal Optimization:</strong> Optimize operational processes and staffing during identified peak transaction times to handle the higher volume efficiently.
+                <br><span class="highlight">Real Figures:</span> High transaction densities observed around the middle range of transaction time, especially at specific increments like approximately 100,000 - 150,000 in transaction time units.
+            </p>
+            <p>
+                <strong>Geographical Focus:</strong> Direct resources to key cities such as Delhi, Mumbai, and Bangalore, which show higher transaction frequencies.
+                <br><span class="highlight">Real Figures:</span> Top cities mentioned include Delhi, Mumbai, and Bangalore, which appear significantly in the word cloud visualizations.
+            </p>
+            <p>
+                <strong>Balancing Data Distribution:</strong> Conduct further analysis to understand the root causes of the skewed data distribution and address these through tailored strategies.
+                <br><span class="highlight">Real Figures:</span> High concentration of data points in lower value ranges, such as transaction amounts heavily clustered below 50,000 INR.
+            </p>
+        </section>
+
+        <section class="content" id="conclusion">
+            <h2>Conclusion</h2>
+            <p>
+                This data-driven analysis uncovers crucial insights into customer behavior, transaction patterns, and demographic distributions, equipping stakeholders with the knowledge to make informed decisions. By leveraging these insights, the organization can enhance its customer engagement strategies, optimize operational processes, and focus resources effectively to drive growth. The recommendations herein, supported by visual data representations, offer a clear path forward for strategic improvements and business optimizations. The findings and actionable insights demonstrate that structured, data-centric approaches can unveil meaningful patterns and empower organizations to implement targeted strategies for sustained success.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Follow me on: 
+            <a href="https://www.instagram.com/sanchit_1609/?hl=en" target="_blank">Instagram</a> | 
+            <a href="https://www.linkedin.com/in/sanchit-jain-4492b11b6/" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script>
+        // Add JavaScript interactivity here if needed
+    </script>
+</body>
+</html>
